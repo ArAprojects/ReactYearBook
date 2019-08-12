@@ -4,7 +4,7 @@ import './Cohort.css';
 
 const Cohort = (props) => {
   console.log(props)
-  return <div> hey hey </div>;
-};
+  return <div> {props.staff.map(individual => <Person qualities={individual} /> )} </div>
+}
 
 export default Cohort;
