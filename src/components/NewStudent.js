@@ -16,12 +16,14 @@ class NewStudent extends Component {
     this.setState({ [event.target.name]: event.target.value });
   }
 
+  clearInputs = () => {
+   this.setState({ name: '', quote: '', superlative: '' });
+ }
+
   submitPerson = event => {
    event.preventDefault(); // prevents the page from refreshing when the form submits
-   const newPerson = {
-     ...this.state // spreading in the name quote and superlative
-   }
-   this.props.newStudent(newPerson); // using the addstudent method from App that we passed as a prop to Form // invoking the method I wrote below to reset the inputs
+   this.props.newStudent(this.state); // using the addstudent method from App that we passed as a prop to Form // invoking the method I wrote below to reset the inputs
+   this.clearInputs()
  }
 
   render() {
