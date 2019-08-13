@@ -13,13 +13,17 @@ class App extends Component {
     }
   }
 
+  newStudent = (newStudent) => {
+    this.setState({ students: [...this.state.students, newStudent] });
+  }
+
   render() {
     return (
       <div className="App">
       <header className="App-header">
       <h1>Turing Yearbook</h1>
       </header>
-        <NewStudent />
+        <NewStudent newStudent={this.newStudent}/>
         <Cohort staff = {this.state.staff} students = {this.state.students}/>
       </div>
     );
