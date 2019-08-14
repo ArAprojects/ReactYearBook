@@ -4,7 +4,7 @@ import './Person.css';
 
 
 const Person = (props) => {
-  console.log(props)
+
   return(
       <section>
         <img className="photo" src={props.qualities.photo} alt={props.qualities.name} />
