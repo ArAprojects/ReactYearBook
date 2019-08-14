@@ -14,8 +14,13 @@ class App extends Component {
   }
 
   newStudent = (newStudent) => {
-    this.setState({ students: [...this.state.students, newStudent] });
+    this.setState({ students: [...this.state.students, newStudent] }); // sets the new state of APP to be the students array + a new one
   }
+
+  deleteStudent = (id) => {
+  const filteredStudents = this.state.students.filter(student => student.id !== id);
+  this.setState({ students: filteredStudents });
+}
 
   render() {
     return (
@@ -23,8 +28,8 @@ class App extends Component {
       <header className="App-header">
       <h1>Turing Yearbook</h1>
       </header>
-        <NewStudent newStudent={this.newStudent}/>
-        <Cohort staff = {this.state.staff} students = {this.state.students}/>
+        <NewStudent newStudent={this.newStudent}/> // new student form
+        <Cohort staff = {this.state.staff} students = {this.state.students} deleteStudent={this.deleteStudent} /> //this is my container to hold students
       </div>
     );
   }

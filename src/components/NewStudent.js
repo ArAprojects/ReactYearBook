@@ -13,6 +13,7 @@ class NewStudent extends Component {
   }
 
   handleChange = event => {
+    console.log(this)
     this.setState({ [event.target.name]: event.target.value });
   }
 
@@ -52,7 +53,6 @@ class NewStudent extends Component {
           value={this.state.superlative}
           onChange={event => this.handleChange(event)}
         />
-
 
          <button onClick={event => this.submitPerson(event)}>SUBMIT</button>
       </form>
