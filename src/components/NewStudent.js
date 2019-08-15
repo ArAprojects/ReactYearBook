@@ -15,6 +15,7 @@ class NewStudent extends Component {
 
   handleChange = event => {
     this.setState({ [event.target.name]: event.target.value });
+    this.setState({id: this.props.students[this.props.students.length - 1].id + 1 })
   }
 
   clearInputs = () => {
@@ -25,7 +26,6 @@ class NewStudent extends Component {
    event.preventDefault(); // prevents the page from refreshing when the form submits
    this.props.newStudent(this.state); // using the addstudent method from App that we passed as a prop to Form // invoking the method I wrote below to reset the inputs
    this.clearInputs()
-   this.setState({id: this.props.students[this.props.students.length - 1].id + 1 })
    console.log(this.props.students)
  }
 

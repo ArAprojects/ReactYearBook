@@ -3,7 +3,17 @@ import './Person.css';
 
 
 
+
+
 const Person = (props) => {
+
+  var button = <button onClick={ () => props.deleteStudent(props.qualities.id)}>🗑</button>
+  console.log(props.qualities.id)
+  if(props.qualities.id < 20) {
+    button = ''
+  }
+
+
 
   return(
       <section>
@@ -11,7 +21,7 @@ const Person = (props) => {
         <h4 className="name"> {props.qualities.name} </h4>
         <p className="quote"> {props.qualities.quote} </p>
         <p className="superlative"> {props.qualities.superlative} </p>
-        <button onClick={ () => props.deleteStudent(props.qualities.id)}>🗑</button>
+        {button}
       </section>
   )
 };

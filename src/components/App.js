@@ -28,7 +28,7 @@ class App extends Component {
       <header className="App-header">
       <h1>Turing Yearbook</h1>
       </header>
-        <NewStudent newStudent={this.newStudent} students = {this.state.students}/> // new student form
+        <NewStudent newStudent={this.newStudent} students = {this.state.students}/> // new student form gives access to students because need array length.
         <Cohort staff = {this.state.staff} students = {this.state.students} deleteStudent={this.deleteStudent} /> //this is my container to hold students
       </div>
     );
