@@ -14,7 +14,7 @@ class App extends Component {
   }
 
   newStudent = (newStudent) => {
-    this.setState({ students: [...this.state.students, newStudent] }); // sets the new state of APP to be the students array + a new one
+    this.setState({ students: [...this.state.students, newStudent] });
   }
 
   deleteStudent = (id) => {
@@ -28,8 +28,8 @@ class App extends Component {
       <header className="App-header">
       <h1>Turing Yearbook</h1>
       </header>
-        <NewStudent newStudent={this.newStudent} students = {this.state.students}/> // new student form gives access to students because need array length.
-        <Cohort staff = {this.state.staff} students = {this.state.students} deleteStudent={this.deleteStudent} /> //this is my container to hold students
+        <NewStudent newStudent={this.newStudent} students = {this.state.students}/>
+        <Cohort staff = {this.state.staff} students = {this.state.students} deleteStudent={this.deleteStudent} /> 
       </div>
     );
   }

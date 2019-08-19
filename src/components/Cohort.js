@@ -4,8 +4,9 @@ import './Cohort.css';
 
 const Cohort = (props) => {
   return <main>
+    
     {props.staff.map(individual => <Person qualities={individual} key={individual.id} /> )}
-    {props.students.map(individual => <Person qualities={individual} key={individual.id} deleteStudent={props.deleteStudent} /> )}
+    {props.students.map(individual => <Person qualities={individual} qualities={individual} key={individual.id} deleteStudent={props.deleteStudent} /> )}
   </main>
 
 }
