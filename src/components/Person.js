@@ -11,11 +11,11 @@ const Person = (props) => {
   }
 
   if(props.qualities.quote === '') {
-    quote = <p>Click here to Add a Quote!</p>
+    quote = <p className="quote">Click here to Add a Quote!</p>
   }
 
   if(props.qualities.superlative === '') {
-    superlative = <p>Click here to Add a Superlative!</p>
+    superlative = <p className="superlative" >Click here to Add a Superlative!</p>
   }
 
   return(
