@@ -23,8 +23,8 @@ class NewStudent extends Component {
  }
 
   submitPerson = event => {
-   event.preventDefault(); // prevents the page from refreshing when the form submits
-   this.props.newStudent(this.state); // using the addstudent method from App that we passed as a prop to Form // invoking the method I wrote below to reset the inputs
+   event.preventDefault();
+   this.props.newStudent(this.state);
    this.clearInputs()
    console.log(this.props.students)
  }
